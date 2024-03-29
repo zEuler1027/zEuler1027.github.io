@@ -1,14 +1,14 @@
 :root {
   --width-main: 720px;
-  --fsp: 17px;
+  --fsp: 1rem;
   --fsh2: calc(var(--fsp) + 11px);
   --fsh3: calc(var(--fsp) + 7px);
   --fsh4: calc(var(--fsp) + 4px);
   --side-content-width: 224px;
   --gap-margin: 16px;
   --gap-padding: 16px;
-  --gap-p: calc(17px + 4px);
-  --gap-p-compact: calc(17px * 0.75);
+  --gap-p: calc(1rem + 4px);
+  --gap-p-compact: calc(1rem * 0.75);
 }
 @media screen and (min-width: 2048px) {
   :root {
@@ -111,7 +111,7 @@ a:hover {
   color: #ff5724;
 }
 .md-text p:not([class]) {
-  text-align: left;
+  text-align: justify;
 }
 hr {
   color: var(--text-meta);
@@ -134,7 +134,7 @@ table:not([class]) {
   margin: 1rem 0;
   max-width: 100%;
   vertical-align: text-top;
-  --fsp: calc(17px - 2px);
+  --fsp: calc(1rem - 2px);
   font-size: var(--fsp);
 }
 table:not([class]) th {
@@ -154,7 +154,7 @@ table:not([class]) tr:hover {
   background: var(--block);
 }
 *[ff=title] {
-  font-family: system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
+  font-family: "LXGW WenKai Screen", system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
 }
 blockquote {
   display: block;
@@ -402,7 +402,7 @@ a.button.start.gradient {
 code {
   -webkit-font-smoothing: auto;
   -moz-osx-font-smoothing: auto;
-  font-family: Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
+  font-family: "LXGW WenKai Screen", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
 }
 p>code:not([class]),
 li>code:not([class]) {
@@ -461,8 +461,8 @@ pre:not([class]):has(>code) {
   line-height: 1.5;
 }
 .md-text .highlight >table::-webkit-scrollbar {
-  height: 4px;
-  width: 4px;
+  height: 0px;
+  width: 0px;
 }
 .md-text .highlight >table::-webkit-scrollbar-track-piece {
   background: transparent;
@@ -777,7 +777,7 @@ table:not([class]) {
   outline: none;
 }
 html {
-  font-family: system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
+  font-family: "LXGW WenKai Screen", system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -803,7 +803,7 @@ input {
 }
 input.copy-area {
   display: block;
-  font-family: Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
+  font-family: "LXGW WenKai Screen", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
   font-size: 0.8125rem;
   font-weight: 700;
   color: var(--text-p3);
@@ -1121,7 +1121,7 @@ div.toast.show {
   margin: 1rem 'calc(1rem - 4px)';
 }
 .article.banner .content .title {
-  font-size: calc(17px + 9px);
+  font-size: calc(1rem + 9px);
   color: var(--text-banner);
 }
 .article.banner .content h1 {
@@ -1177,10 +1177,10 @@ div.toast.show {
 .md-text .article-footer .header {
   font-weight: 500;
   color: var(--text-p2);
-  font-size: calc(17px + 2px);
+  font-size: calc(1rem + 2px);
 }
 .md-text .article-footer .body {
-  --fsp: calc(17px - 2px);
+  --fsp: calc(1rem - 2px);
 }
 .md-text .article-footer .body input.copy-area {
   margin: 0.75rem 0;
@@ -1204,7 +1204,7 @@ div.toast.show {
   word-break: break-all;
 }
 .md-text .article-footer .body .post-title p {
-  --fsp: calc(17px - 2px);
+  --fsp: calc(1rem - 2px);
 }
 .md-text .article-footer section+section {
   margin-top: 1rem;
@@ -1586,7 +1586,7 @@ div.toast.show {
   background-image: url("https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/arrow/f049bbd4e88ec.svg");
 }
 .paginator-wrap .current {
-  font-family: Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
+  font-family: "LXGW WenKai Screen", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
   background: var(--block);
 }
 .paginator-wrap .extend {
@@ -1645,7 +1645,7 @@ article.md-text.content+.related-wrap {
 .related-posts .item .title {
   color: var(--text-p1);
   font-weight: 500;
-  --fsp: calc(17px - 1px);
+  --fsp: calc(1rem - 1px);
   font-size: var(--fsp);
   transition: color 0.2s ease-out, border 0.2s ease-out;
   -moz-transition: color 0.2s ease-out, border 0.2s ease-out;
@@ -1658,7 +1658,7 @@ article.md-text.content+.related-wrap {
 }
 .related-posts .item .excerpt {
   color: var(--text-p3);
-  --fsp: calc(17px - 3px);
+  --fsp: calc(1rem - 3px);
   font-size: var(--fsp);
   margin-top: 0.5rem;
   display: -webkit-box;
@@ -1693,7 +1693,7 @@ article.md-text.content+.related-wrap {
   margin: 0;
   line-height: 1.2;
   color: var(--text-p1);
-  font-size: calc(17px + 2px);
+  font-size: calc(1rem + 2px);
 }
 .related-wrap#read-next .body a:hover {
   color: #ff5724 !important;
@@ -1702,7 +1702,7 @@ article.md-text.content+.related-wrap {
   text-align: right;
 }
 .wiki+.related-wrap#read-next .item a {
-  font-size: calc(17px + 7px);
+  font-size: calc(1rem + 7px);
 }
 .wiki+.related-wrap#read-next .item#prev a {
   color: var(--text-p3);
@@ -2457,7 +2457,7 @@ a.tag-plugin.button:hover {
   background: var(--block);
   border-right: 1px solid var(--block-border);
   color: var(--text-p3);
-  font-family: Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
+  font-family: "LXGW WenKai Screen", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
   font-size: 0.8125rem;
   font-weight: 700;
   flex-shrink: 0;
@@ -2495,7 +2495,7 @@ a.tag-plugin.button:hover {
 }
 .tag-plugin.folders {
   margin: var(--gap-p) 0;
-  --fsp: calc(17px - 2px);
+  --fsp: calc(1rem - 2px);
   font-size: var(--fsp);
   border-top: 1px solid var(--block-border);
   overflow: hidden;
@@ -2549,7 +2549,7 @@ a.tag-plugin.button:hover {
   content: '-';
 }
 .tag-plugin.folders details[open] >div.body {
-  --fsp: calc(17px - 1px);
+  --fsp: calc(1rem - 1px);
 }
 .tag-plugin.folders details[open] >div.body >:first-child {
   margin-top: 1rem;
@@ -2571,7 +2571,7 @@ details.folding summary {
   margin: -1rem;
   color: var(--text-p2);
   font-weight: 500;
-  --fsp: calc(17px - 2px);
+  --fsp: calc(1rem - 2px);
   font-size: var(--fsp);
   position: relative;
   line-height: 1.2;
@@ -2614,7 +2614,7 @@ details.folding[open] >div.body {
   padding: 0 1rem 1rem;
   margin: 0 -1rem -1rem;
   color: var(--text-p1);
-  --fsp: calc(17px - 1px);
+  --fsp: calc(1rem - 1px);
 }
 details.folding[open] >div.body >:first-child {
   margin-top: 1rem;
@@ -2979,7 +2979,7 @@ details.folding[child=iframe] >div.body {
   margin: 2px 0;
   display: inline-flex;
   align-items: center;
-  --fsp: calc(17px - 2px);
+  --fsp: calc(1rem - 2px);
   font-size: var(--fsp);
   font-weight: 500;
   transition: background 0.2s ease-out, color 0.2s ease-out;
@@ -3089,7 +3089,7 @@ p>strong>span.tag-plugin.icon {
   border-bottom-width: 2px;
   background: var(--card);
   padding: 2px 4px 1px 4px;
-  font-family: Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
+  font-family: "LXGW WenKai Screen", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
   font-weight: 700;
 }
 .md-text psw {
@@ -3111,7 +3111,7 @@ p>strong>span.tag-plugin.icon {
   color: var(--theme);
   line-height: 1;
   font-weight: 700;
-  font-family: Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
+  font-family: "LXGW WenKai Screen", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
 }
 .md-text h1 sup,
 .md-text h2 sup,
@@ -3292,7 +3292,7 @@ p>strong>span.tag-plugin.icon {
   color: var(--text-p1);
 }
 .md-text .tag-plugin.note >.title {
-  --fsp: calc(17px - 1px);
+  --fsp: calc(1rem - 1px);
   font-size: var(--fsp);
   line-height: 1.5;
   margin-top: var(--gap-p-compact);
@@ -3305,7 +3305,7 @@ p>strong>span.tag-plugin.icon {
 }
 .md-text .tag-plugin.note >.body,
 .md-text .tag-plugin.note >.body p {
-  --fsp: calc(17px - 2px);
+  --fsp: calc(1rem - 2px);
   font-size: var(--fsp);
   line-height: 1.5;
 }
@@ -3526,7 +3526,7 @@ p>strong>span.tag-plugin.icon {
 }
 .md-text .tag-plugin.poetry .content >.meta {
   color: var(--text-p2);
-  --fsp: calc(17px - 3px);
+  --fsp: calc(1rem - 3px);
   font-size: var(--fsp);
   font-weight: 500;
 }
@@ -3543,7 +3543,7 @@ p>strong>span.tag-plugin.icon {
   font-style: italic;
   color: var(--text-p4);
   margin: var(--gap-p) 0;
-  --fsp: calc(17px - 3px);
+  --fsp: calc(1rem - 3px);
   font-size: var(--fsp);
 }
 .md-text .tag-plugin.poetry .content {
@@ -3602,7 +3602,7 @@ p>strong>span.tag-plugin.icon {
 }
 .md-text.content .tag-plugin.quot h1,
 .md-text.content .tag-plugin.quot h2 {
-  font-size: calc(17px + 11px);
+  font-size: calc(1rem + 11px);
   font-weight: 900;
   padding: 4px 32px 0;
 }
@@ -3616,7 +3616,7 @@ p>strong>span.tag-plugin.icon {
 .md-text.content .tag-plugin.quot h4,
 .md-text.content .tag-plugin.quot h5,
 .md-text.content .tag-plugin.quot h6 {
-  font-size: calc(17px + 7px);
+  font-size: calc(1rem + 7px);
 }
 .md-text.content .tag-plugin.quot p {
   font-size: calc(var(--fsp) + 2px);
@@ -3792,7 +3792,7 @@ p>strong>span.tag-plugin.icon {
   display: block;
   cursor: pointer;
   padding: 0.25rem 0.75rem;
-  --fsp: calc(17px - 3px);
+  --fsp: calc(1rem - 3px);
   font-size: var(--fsp);
   line-height: inherit;
   font-weight: 500;
@@ -3952,7 +3952,7 @@ p>strong>span.tag-plugin.icon {
   box-shadow: 0 1px 4px 0px rgba(0,0,0,0.02), 0 2px 8px 0px rgba(0,0,0,0.02);
 }
 .tag-plugin.timeline .body p {
-  --fsp: calc(17px - 1px);
+  --fsp: calc(1rem - 1px);
 }
 .tag-plugin.timeline .body p img {
   display: block;
@@ -3975,7 +3975,7 @@ p>strong>span.tag-plugin.icon {
   color: var(--text-p1);
   line-height: 1.25;
   padding: 0.75rem 1rem;
-  --fsp: calc(17px - 1px);
+  --fsp: calc(1rem - 1px);
   font-size: var(--fsp);
 }
 .tag-plugin.timeline[api] .body p.title {
@@ -4091,7 +4091,7 @@ p>strong>span.tag-plugin.icon {
   margin: 0.75rem 0;
 }
 .tag-plugin.timeline .body blockquote p {
-  --fsp: calc(17px - 2px);
+  --fsp: calc(1rem - 2px);
   margin: 0.25rem;
 }
 .tag-plugin.timeline .body {
@@ -4426,7 +4426,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 .search-wrapper .search-input {
   width: 100%;
   box-sizing: border-box;
-  font-family: system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
+  font-family: "LXGW WenKai Screen", system-ui, "Microsoft Yahei", "Segoe UI", -apple-system, Roboto, Ubuntu, "Helvetica Neue", Arial, "WenQuanYi Micro Hei", sans-serif;
   font-size: 0.875rem;
   padding: 12px 0;
   color: var(--text);
@@ -4731,7 +4731,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 }
 .widgets .widget-wrapper.user-card p.username {
   font-weight: 900;
-  font-size: calc(17px + 11px);
+  font-size: calc(1rem + 11px);
   color: var(--text);
   margin: 0;
 }
@@ -4939,7 +4939,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   -webkit-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   word-break: break-all;
-  --fsp: calc(17px - 2px);
+  --fsp: calc(1rem - 2px);
 }
 .widget-wrapper.timeline .tag-plugin.timeline .timenode {
   z-index: 1;
@@ -4964,7 +4964,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 }
 .widget-wrapper.timeline .tag-plugin.timeline .timenode .body p,
 .widget-wrapper.timeline .tag-plugin.timeline .timenode .body li {
-  --fsp: calc(17px - 3px);
+  --fsp: calc(1rem - 3px);
 }
 .widget-wrapper.timeline .tag-plugin.timeline .timenode .body code {
   background: none;
@@ -5006,7 +5006,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   border-radius: 4px;
 }
 .widget-wrapper.toc .toc {
-  --fsp: calc(17px - 2px);
+  --fsp: calc(1rem - 2px);
   padding: 0;
   margin: 0;
   position: relative;
@@ -5081,11 +5081,11 @@ details.toc[open] >div.body section .header+.doc_tree {
 }
 .widget-wrapper.toc .toc .toc-item {
   font-weight: 500;
-  --fsp: calc(17px - 1px);
+  --fsp: calc(1rem - 1px);
 }
 .widget-wrapper.toc .toc .toc-item .toc-item {
   font-weight: 400;
-  --fsp: calc(17px - 2px);
+  --fsp: calc(1rem - 2px);
 }
 .widget-wrapper.toc .toc ol {
   padding-left: 0;
@@ -5331,7 +5331,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 }
 .post-list #archive .archive-header {
   display: inline-block;
-  font-family: Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
+  font-family: "LXGW WenKai Screen", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 0.5em;
@@ -5362,7 +5362,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   border-bottom: 1px dashed var(--text-meta);
 }
 .post-list #archive a.post time {
-  font-family: Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
+  font-family: "LXGW WenKai Screen", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
   margin-right: 1em;
   font-weight: 700;
   flex-shrink: 0;
@@ -5386,7 +5386,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   align-items: center;
   justify-content: space-between;
   font-weight: 500;
-  font-size: calc(17px - 2px);
+  font-size: calc(1rem - 2px);
 }
 .post-list #cats a.cat.child {
   padding-left: 2rem;
@@ -5403,7 +5403,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 }
 .post-list #cats a.cat .badge {
   font-weight: 700;
-  font-family: Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
+  font-family: "LXGW WenKai Screen", Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
   opacity: 0.5;
   font-size: 0.75rem;
 }
@@ -5609,7 +5609,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   font-weight: 500;
   margin: 1.25rem auto 0.75rem 0;
   line-height: 1.2;
-  font-size: calc(17px + 4px);
+  font-size: calc(1rem + 4px);
   border-bottom: none;
   color: var(--text);
   transition: color 0.2s ease-out;
@@ -5619,7 +5619,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 }
 @media screen and (max-width: 500px) {
   .l_main .post-list .post-title {
-    font-size: calc(17px + 2px);
+    font-size: calc(1rem + 2px);
     margin: 0.5rem 0;
   }
 }
@@ -5674,7 +5674,7 @@ details.toc[open] >div.body section .header+.doc_tree {
   flex-wrap: wrap;
   margin: 0;
   line-height: 2;
-  --fsp: calc(17px - 1px);
+  --fsp: calc(1rem - 1px);
   font-size: var(--fsp);
 }
 .post-list .post-card .meta.cap,
@@ -5768,7 +5768,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 }
 .post-list .post-card.post.photo .cover .cover-info .title {
   font-weight: 500;
-  font-size: calc(17px + 7px);
+  font-size: calc(1rem + 7px);
 }
 @media screen and (max-width: 500px) {
   .post-list .post-card.post.photo .cover .cover-info {
@@ -5778,7 +5778,7 @@ details.toc[open] >div.body section .header+.doc_tree {
     margin-top: 2px;
   }
   .post-list .post-card.post.photo .cover .cover-info .title {
-    font-size: calc(17px + 4px);
+    font-size: calc(1rem + 4px);
   }
   .post-list .post-card.post.photo .cover .cover-info .cap {
     font-size: 0.75rem;
@@ -5786,7 +5786,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 }
 .post-list .post-card.post.photo h2 {
   margin: 0.25rem 0;
-  font-size: calc(17px + 4px);
+  font-size: calc(1rem + 4px);
 }
 .post-list .post-card.wiki article {
   display: flex;
@@ -5946,7 +5946,7 @@ body>.sitebg .siteblur:hover {
 .l_body[text-indent] .md-text.content li p:not([class]),
 .l_body[text-indent] .md-text.content .article-footer p:not([class]) {
   text-indent: 0;
-  text-align: left;
+  text-align: justify;
 }
 .md-text ul:not(:last-child),
 .md-text ol:not(:last-child) {
@@ -5962,7 +5962,7 @@ body>.sitebg .siteblur:hover {
 .md-text blockquote ol,
 .md-text ul ol,
 .md-text ol ol {
-  --fsp: calc(17px - 1px);
+  --fsp: calc(1rem - 1px);
   font-size: var(--fsp);
   line-height: 1.5;
 }
