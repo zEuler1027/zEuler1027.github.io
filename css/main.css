@@ -6106,3 +6106,128 @@ table a:not([class]):has(img):hover {
 .md-text .aplayer {
   border-radius: 12px;
 }
+img.lazy {
+  transition: all 0.38s ease-out;
+  -moz-transition: all 0.38s ease-out;
+  -webkit-transition: all 0.38s ease-out;
+  -o-transition: all 0.38s ease-out;
+}
+img.lazy:not(.loaded) {
+  opacity: 0;
+}
+img.lazy.loaded,
+img.lazy.error {
+  opacity: 1;
+}
+:root {
+  --swiper-theme-color: #1cd0fd !important;
+}
+.swiper {
+  width: 100%;
+  border-radius: 4px;
+  --gap-p: 2rem;
+}
+.swiper:not(.swiper-initialized) {
+  display: none;
+}
+div.swiper-slide {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-self: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 50%;
+}
+div.swiper-slide img {
+  border-radius: 4px;
+}
+.swiper[width='max'] .swiper-slide {
+  width: 100%;
+}
+.swiper[width='min'] .swiper-slide {
+  width: 25%;
+}
+.swiper[effect='cards'] .swiper-slide {
+  max-width: 75%;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  padding: 1rem 0.25rem;
+  margin-top: -2rem !important;
+  border-radius: 40px;
+  background: rgba(255,255,255,0.25);
+  transition: background 0.2s ease-out;
+  -moz-transition: background 0.2s ease-out;
+  -webkit-transition: background 0.2s ease-out;
+  -o-transition: background 0.2s ease-out;
+  --swiper-theme-color: var(--text) !important;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 1.2rem !important;
+  font-weight: 700 !important;
+  color: var(--swiper-theme-color);
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: #fff !important;
+  --swiper-theme-color: #ff5724 !important;
+}
+.swiper-button-prev:after {
+  transform: translateX(-1px);
+}
+.swiper-button-next:after {
+  transform: translateX(1px);
+}
+img[data-fancybox] {
+  cursor: zoom-in;
+}
+.highlight {
+  position: relative;
+}
+.highlight .code .copy-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0px 0.5rem;
+  font-weight: 700;
+  visibility: hidden;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background: var(--card);
+  display: block;
+  cursor: pointer;
+  margin-right: 4px;
+  margin-top: 4px;
+  border-radius: calc(12px - 4px);
+}
+.highlight:hover .code:before {
+  visibility: hidden;
+}
+.highlight:hover .copy-btn {
+  visibility: visible;
+}
+.highlight .code .copy-btn.success {
+  background: #3dc550;
+  color: #fff;
+  visibility: visible;
+}
+.highlight .code .copy-btn.warning {
+  background: #fa6400;
+  color: #fff;
+  visibility: visible;
+}
+.md-text .folding[child=codeblock] .code .copy-btn {
+  z-index: 1;
+  margin-right: 1rem;
+  border-radius: 8px;
+}
