@@ -16,17 +16,17 @@
   <title>使用Py3Dmol创建分子轨迹 - @Atomhacker</title>
 
   
-    <meta name="description" content="本文为使用py3Dmol库创建一系列分子坐标（多帧）组成的分子轨迹，进行动态可视化的教程。 3Dmol.js3Dmol.js 是一个用于科学可视化的开源 JavaScript 库，特别是用于显示和操纵生物分子结构。支持多种文件格式，如 PDB（Protein Data Bank）文件、SDF（Structure-Data File）文件等，用于加载分子数据。利用 WebGL 技术，3Dmol.js">
+    <meta name="description" content="本文为使用py3Dmol库创建一系列分子坐标（多帧）组成的分子轨迹，进行动态可视化的教程。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Py3Dmol创建分子轨迹">
 <meta property="og:url" content="http://zeuler1027.github.io/2024/07/19/py3dmol/index.html">
 <meta property="og:site_name" content="@Atomhacker">
-<meta property="og:description" content="本文为使用py3Dmol库创建一系列分子坐标（多帧）组成的分子轨迹，进行动态可视化的教程。 3Dmol.js3Dmol.js 是一个用于科学可视化的开源 JavaScript 库，特别是用于显示和操纵生物分子结构。支持多种文件格式，如 PDB（Protein Data Bank）文件、SDF（Structure-Data File）文件等，用于加载分子数据。利用 WebGL 技术，3Dmol.js">
+<meta property="og:description" content="本文为使用py3Dmol库创建一系列分子坐标（多帧）组成的分子轨迹，进行动态可视化的教程。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://zeuler1027.github.io/assets/image/image.png">
 <meta property="og:image" content="http://zeuler1027.github.io/assets/gif/ben%20copy.gif">
 <meta property="article:published_time" content="2024-07-19T11:46:14.000Z">
-<meta property="article:modified_time" content="2024-07-21T05:46:35.137Z">
+<meta property="article:modified_time" content="2024-07-21T06:48:00.333Z">
 <meta property="article:author" content="Songze Huo">
 <meta property="article:tag" content="Py3Dmol">
 <meta property="article:tag" content="可视化">
@@ -77,7 +77,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E7%90%86%E8%AE%BA%E8%AE%A1%E7%AE%97/">理论计算</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-07-19T11:46:14.000Z">2024-07-19</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-07-21T05:46:35.137Z">2024-07-21</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-07-19T11:46:14.000Z">2024-07-19</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-07-21T06:48:00.333Z">2024-07-21</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -89,6 +89,8 @@
     
   </div>
   </div><article class="md-text content"><div id="postchat_postcontent"><p>本文为使用py3Dmol库创建一系列分子坐标（多帧）组成的分子轨迹，进行动态可视化的教程。</p>
+<span id="more"></span>
+
 <h2 id="3Dmol-js"><a href="#3Dmol-js" class="headerlink" title="3Dmol.js"></a>3Dmol.js</h2><p>3Dmol.js 是一个用于科学可视化的开源 JavaScript 库，特别是用于显示和操纵生物分子结构。支持多种文件格式，如 PDB（Protein Data Bank）文件、SDF（Structure-Data File）文件等，用于加载分子数据。利用 WebGL 技术，3Dmol.js 能够高效地渲染大型分子结构，提供流畅的用户体验。因此被广泛应用于生物信息学、药物设计和分子生物学等领域，用于研究和展示分子的三维结构和相互作用。</p>
 <h2 id="py3Dmol"><a href="#py3Dmol" class="headerlink" title="py3Dmol"></a>py3Dmol</h2><p>简单来说，py3Dmol 可以被视为 3Dmol.js 的 Python API。py3Dmol 是一个 Python 库，它提供了与 3Dmol.js 交互的接口，使得用户可以在 Python 环境中使用 3Dmol.js 的功能。py3Dmol 为需要在 Python 环境中进行分子可视化的用户提供了便利，使得 3Dmol.js 的强大功能可以更方便地应用于科学研究和数据分析。</p>
 <p>有人可能会问为什么不直接使用 GUI 界面的软件，或者 ase 库中的 view 等，本教程主要是针对 Linux 中没有 GUI 的情况下对分子的快捷可视化。</p>
@@ -130,8 +132,7 @@
       <div class="header"><span>分享文章</span></div>
       <div class="body">
         <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="http://zeuler1027.github.io/2024/07/19/py3dmol/"></div>
-        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg"></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=http://zeuler1027.github.io/2024/07/19/py3dmol/&amp;title=使用Py3Dmol创建分子轨迹 - @Atomhacker&amp;summary=本文为使用py3Dmol库创建一系列分子坐标（多帧）组成的分子轨迹，进行动态可视化的教程。
-3Dmol.js3Dmol.js 是一个用于科学可视化的开源 JavaScript 库，特别是用于显示和操纵生物分子结构。支持多种文件格式，如..."><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg"></a><a class="social share-item email" href="mailto:?subject=使用Py3Dmol创建分子轨迹 - @Atomhacker&amp;body=http://zeuler1027.github.io/2024/07/19/py3dmol/"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg"></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg"></a></div>
+        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg"></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=http://zeuler1027.github.io/2024/07/19/py3dmol/&amp;title=使用Py3Dmol创建分子轨迹 - @Atomhacker&amp;summary=本文为使用py3Dmol库创建一系列分子坐标（多帧）组成的分子轨迹，进行动态可视化的教程。"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg"></a><a class="social share-item email" href="mailto:?subject=使用Py3Dmol创建分子轨迹 - @Atomhacker&amp;body=http://zeuler1027.github.io/2024/07/19/py3dmol/"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg"></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg"></a></div>
         
         <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
           <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&amp;data=http://zeuler1027.github.io/2024/07/19/py3dmol/">
