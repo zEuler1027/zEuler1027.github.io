@@ -1,27 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+       http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+>
 
 <url>
-  <loc>https://www.atomhacker.xyz/</loc>
-  <lastmod>2024-07-23T11:14:52+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.atomhacker.xyz/2024/03/27/hello/</loc>
-  <lastmod>2024-07-23T11:14:52+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.atomhacker.xyz/2024/07/19/py3dmol/</loc>
-  <lastmod>2024-07-23T11:14:52+00:00</lastmod>
-  <priority>0.80</priority>
+ <loc>https://www.atomhacker.xyz/</loc>
+ <priority>0.3</priority>
+ <lastmod>2024-07-25</lastmod>
+ <changefreq>weekly</changefreq>
 </url>
 
+<url>
+ <loc>https://www.atomhacker.xyz/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0</loc>
+ <priority>0.3</priority>
+ <lastmod>2024-07-25</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://www.atomhacker.xyz/categories/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6</loc>
+ <priority>0.3</priority>
+ <lastmod>2024-07-25</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://www.atomhacker.xyz/categories/Code</loc>
+ <priority>0.3</priority>
+ <lastmod>2024-07-25</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://www.atomhacker.xyz/categories/%E7%90%86%E8%AE%BA%E8%AE%A1%E7%AE%97</loc>
+ <priority>0.3</priority>
+ <lastmod>2024-07-25</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://www.atomhacker.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0</loc>
+ <priority>0.3</priority>
+ <lastmod>2024-07-25</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://www.atomhacker.xyz/2024/03/27/hello</loc>
+ <priority>0.3</priority>
+ <lastmod>2024-07-25</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://www.atomhacker.xyz/2024/07/19/py3dmol</loc>
+ <priority>0.3</priority>
+ <lastmod>2024-07-25</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://www.atomhacker.xyz/categories</loc>
+ <priority>0.3</priority>
+ <lastmod>2024-07-25</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://www.atomhacker.xyz/tags</loc>
+ <priority>0.3</priority>
+ <lastmod>2024-07-25</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
+
+<url>
+ <loc>https://www.atomhacker.xyz/archives</loc>
+ <priority>0.3</priority>
+ <lastmod>2024-07-25</lastmod>
+ <changefreq>weekly</changefreq>
+</url>
 
 </urlset>
