@@ -13,25 +13,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>@Atomhacker</title>
+  <title>使用Py3Dmol创建分子轨迹 - @Atomhacker</title>
 
   
-    <meta name="description" content="62c00bc99c6f7854a54bf38ea02c9070">
-<meta property="og:type" content="website">
-<meta property="og:title" content="@Atomhacker">
-<meta property="og:url" content="http://zeuler1027.github.io/baidu_verify_codeva-fOeN3c9kUd.html">
+    <meta name="description" content="本文为使用py3Dmol库创建一系列分子坐标（多帧）组成的分子轨迹，进行动态可视化的教程。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Py3Dmol创建分子轨迹">
+<meta property="og:url" content="http://zeuler1027.github.io/2024/07/19/py3dmol/index.html">
 <meta property="og:site_name" content="@Atomhacker">
-<meta property="og:description" content="62c00bc99c6f7854a54bf38ea02c9070">
+<meta property="og:description" content="本文为使用py3Dmol库创建一系列分子坐标（多帧）组成的分子轨迹，进行动态可视化的教程。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-07-21T07:29:40.891Z">
-<meta property="article:modified_time" content="2024-07-21T07:29:40.891Z">
+<meta property="og:image" content="http://zeuler1027.github.io/2024/07/19/assets/image/image.png">
+<meta property="og:image" content="http://zeuler1027.github.io/2024/07/19/assets/gif/ben%20copy.gif">
+<meta property="article:published_time" content="2024-07-19T11:46:14.000Z">
+<meta property="article:modified_time" content="2024-08-27T07:29:38.797Z">
 <meta property="article:author" content="Songze Huo">
+<meta property="article:tag" content="Code">
+<meta property="article:tag" content="Py3Dmol">
+<meta property="article:tag" content="可视化">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://zeuler1027.github.io/2024/07/19/assets/image/image.png">
 <meta name="twitter:creator" content="@none">
   
   
   
-  
+  <meta name="keywords" content="Code,Py3Dmol,可视化">
 
   <!-- feed -->
   
@@ -46,7 +52,7 @@
 </head>
 <body>
 
-<div class="l_body s:aa content tech" id="start" layout="page"><aside class="l_left"><div class="leftbar-container">
+<div class="l_body s:aa content tech" id="start" layout="post"><aside class="l_left"><div class="leftbar-container">
 
 
 <header class="header"><div class="logo-wrap"><a class="avatar" target="_blank" rel="noopener" href="https://github.com/zEuler1027"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy="" class="avatar lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/image/profile.jpg"></a><a class="title" target="_blank" rel="noopener" href="https://github.com/zEuler1027"><div class="main" ff="title">@Atomhacker</div><div class="sub normal cap">欧拉の化学反应容器</div><div class="sub hover cap" style="opacity:0"> AI, 理论计算化学</div></a></div></header>
@@ -58,7 +64,7 @@
 <nav class="menu dis-select"><a class="nav-item active" title="Home" href="/" style="color:#1BCDFC"><span>Home</span></a><a class="nav-item" title="深度学习" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="color:#B0C4DE"><span>深度学习</span></a><a class="nav-item" title="量子化学" href="/categories/%E9%87%8F%E5%AD%90%E5%8C%96%E5%AD%A6/" style="color:#B0C4DE"><span>量子化学</span></a><a class="nav-item" title="Code" href="/categories/Code/" style="color:#FFD580"><span>Code</span></a><a class="nav-item" title="理论计算" href="/categories/%E7%90%86%E8%AE%BA%E8%AE%A1%E7%AE%97/" style="color:#B0C4DE"><span>理论计算</span></a><a class="nav-item" title="学习笔记" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="color:#B0C4DE"><span>学习笔记</span></a></nav>
 </div>
 <div class="widgets">
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/08/12/kabsch/"><span class="title">快速进行点群（图节点）对齐以及Kabsch算法的代码实现</span></a><a class="item title" href="/2024/07/19/py3dmol/"><span class="title">使用Py3Dmol创建分子轨迹</span></a></div></widget>
+<widget class="widget-wrapper user-card ghuser"><div class="widget-body ds-ghinfo" api="https://api.github.com/users/zEuler1027"><div class="avatar"><img class="lazy" no-lazy="" type="img" id="avatar_url" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/image/profile.jpg"></div><p class="username" ff="title" type="text" id="name">&nbsp;</p><p class="bio" type="text" id="bio">&nbsp;</p><div class="buttons"><a class="btn" target="_blank" rel="noopener" href="https://github.com/zEuler1027?tab=followers"><span class="title" type="text" id="followers">0</span><span class="desc">followers</span></a><a class="btn" target="_blank" rel="noopener" href="https://github.com/zEuler1027?tab=following"><span class="title" type="text" id="following">0</span><span class="desc">following</span></a><a class="btn" target="_blank" rel="noopener" href="https://github.com/zEuler1027?tab=repositories"><span class="title" type="text" id="public_repos">0</span><span class="desc">repos</span></a></div><a class="follow" target="_blank" rel="noopener" href="https://github.com/zEuler1027"><svg aria-hidden="true" role="img" class="color-icon-primary" viewBox="0 0 16 16" width="1em" height="1em" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>Follow</a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -70,21 +76,83 @@
 <div class="article banner top">
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
-
-  <span class="sep"></span>
-  <a class="cap breadcrumb" href="/baidu_verify_codeva-fOeN3c9kUd.html"></a>
-  </div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-07-21T07:29:40.891Z">2024-07-21</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-07-21T07:29:40.891Z">2024-07-21</time></span></div></div></div>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E7%90%86%E8%AE%BA%E8%AE%A1%E7%AE%97/">理论计算</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-07-19T11:46:14.000Z">2024-07-19</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-08-27T07:29:38.797Z">2024-08-27</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>使用Py3Dmol创建分子轨迹</span></h1>
+        
+      </div>
+    </div>
     
   </div>
-  </div><article class="md-text content">62c00bc99c6f7854a54bf38ea02c9070</article>
+  </div><article class="md-text content"><div id="postchat_postcontent"><p>本文为使用py3Dmol库创建一系列分子坐标（多帧）组成的分子轨迹，进行动态可视化的教程。</p>
+<span id="more"></span>
+<h2 id="3Dmol-js"><a href="#3Dmol-js" class="headerlink" title="3Dmol.js"></a>3Dmol.js</h2><p>3Dmol.js 是一个用于科学可视化的开源 JavaScript 库，特别是用于显示和操纵生物分子结构。支持多种文件格式，如 PDB（Protein Data Bank）文件、SDF（Structure-Data File）文件等，用于加载分子数据。利用 WebGL 技术，3Dmol.js 能够高效地渲染大型分子结构，提供流畅的用户体验。因此被广泛应用于生物信息学、药物设计和分子生物学等领域，用于研究和展示分子的三维结构和相互作用。</p>
+<h2 id="py3Dmol"><a href="#py3Dmol" class="headerlink" title="py3Dmol"></a>py3Dmol</h2><p>简单来说，py3Dmol 可以被视为 3Dmol.js 的 Python API。py3Dmol 是一个 Python 库，它提供了与 3Dmol.js 交互的接口，使得用户可以在 Python 环境中使用 3Dmol.js 的功能。py3Dmol 为需要在 Python 环境中进行分子可视化的用户提供了便利，使得 3Dmol.js 的强大功能可以更方便地应用于科学研究和数据分析。</p>
+<p>有人可能会问为什么不直接使用 GUI 界面的软件，或者 ase 库中的 view 等，本教程主要是针对 Linux 中没有 GUI 的情况下对分子的快捷可视化。</p>
+<p>对于分子的可视化，py3Dmol 是非常实用的，但 py3Dmol 中实现的接口功能并不多，并且没有文档支持，以至于我花费很长时间读 py3Dmol 的源码才搞清楚如何使用其进行分子轨迹的可视化ToT，为了防止大家踩坑所以出一个教程。</p>
+<h2 id="py3Dmol安装"><a href="#py3Dmol安装" class="headerlink" title="py3Dmol安装"></a>py3Dmol安装</h2><p>如果你还没有安装 py3Dmol（可能是废话，不然你也不会点进来），可以方便地直接通过 pip 安装。</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install py3Dmol</span><br></pre></td></tr></tbody></table></figure>
+<p>以及安装可能用到的 pymatgen 库。</p>
+<figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pymatgen</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="可视化单个分子构象（示例）"><a href="#可视化单个分子构象（示例）" class="headerlink" title="可视化单个分子构象（示例）"></a>可视化单个分子构象（示例）</h2><p>很简单的例子，如果你还没有用过 py3Dmol ，可以在 jupyter 中试一下。</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> py3Dmol</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">draw_mol_xyz</span>(<span class="params">file_path</span>):</span><br><span class="line">    <span class="comment"># 读取一个 .xyz 文件进行可视化</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(file_path, <span class="string">'r'</span>) <span class="keyword">as</span> fo:</span><br><span class="line">        xyz = fo.read()</span><br><span class="line">    view = py3Dmol.view(width=<span class="number">800</span>, height=<span class="number">400</span>)</span><br><span class="line">    view.addModel(xyz, <span class="string">'xyz'</span>)</span><br><span class="line">    view.setStyle({<span class="string">'sphere'</span>: {<span class="string">'scale'</span>: <span class="number">0.35</span>}, <span class="string">'stick'</span>: {<span class="string">'radius'</span>: <span class="number">0.20</span>}})</span><br><span class="line">    view.zoomTo()</span><br><span class="line">    view.show()</span><br><span class="line"></span><br><span class="line">file_path = <span class="string">'.xyz'</span> <span class="comment"># 你的 .xyz 文件路径</span></span><br><span class="line">draw_mol_xyz(file_path)</span><br></pre></td></tr></tbody></table></figure>
+<p>运行结果如下：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="../assets/image/image.png" alt="分子可视化结果"></p>
+<h2 id="可视化分子轨迹"><a href="#可视化分子轨迹" class="headerlink" title="可视化分子轨迹"></a>可视化分子轨迹</h2><p>这里以生成苯环的多帧坐标轨迹为例。</p>
+<h3 id="首先读取分子的原子序数和坐标"><a href="#首先读取分子的原子序数和坐标" class="headerlink" title="首先读取分子的原子序数和坐标"></a>首先读取分子的原子序数和坐标</h3><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> py3Dmol</span><br><span class="line"><span class="keyword">from</span> pymatgen.core.structure <span class="keyword">import</span> Molecule</span><br><span class="line"></span><br><span class="line">coords = [] <span class="comment"># 输入你的多帧坐标，此处省略。</span></span><br><span class="line"><span class="comment"># 使用 pymatgen 创建 Molecule对象以便于 .xyz 格式转换，此处我有100帧坐标因此创建100个对象。</span></span><br><span class="line">benzenes = [Molecule([<span class="string">"C"</span>]*<span class="number">6</span> + [<span class="string">'H'</span>]*<span class="number">6</span>, coords[i]) <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">100</span>)]  </span><br></pre></td></tr></tbody></table></figure>
+<ul>
+<li><code>coords</code>: 轨迹坐标，维度为[frames, N, 3]，frames为帧数。</li>
+<li><code>benzenes</code>: Molecule对象列表，[frames, ]</li>
+</ul>
+<p>也可以直接读取 .xyz 文件，或者用以下示例创建 Molecule 对象，但要保证原子序数的一致和对齐。</p>
+<figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mols = [Molecule(species=traj[<span class="string">'atomic_numbers'</span>], coords=traj[<span class="string">'pos'</span>]) <span class="keyword">for</span> traj <span class="keyword">in</span> trajs]</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="格式转换以及可视化"><a href="#格式转换以及可视化" class="headerlink" title="格式转换以及可视化"></a>格式转换以及可视化</h3><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">molecules = [mol.to(fmt=<span class="string">"xyz"</span>) <span class="keyword">for</span> mol <span class="keyword">in</span> benzenes[-<span class="number">50</span>:]] + [benzenes[-<span class="number">1</span>].to(fmt=<span class="string">"xyz"</span>)] * <span class="number">20</span> <span class="comment"># 最后一帧停顿</span></span><br><span class="line">models = <span class="string">''</span></span><br><span class="line"></span><br><span class="line">view = py3Dmol.view(width=<span class="number">800</span>, height=<span class="number">400</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i, mol <span class="keyword">in</span> <span class="built_in">enumerate</span>(molecules):</span><br><span class="line">    models += mol + <span class="string">'\n'</span></span><br><span class="line">view.addModelsAsFrames(models) <span class="comment"># 添加多帧 xyz 字符串</span></span><br><span class="line">view.setStyle({<span class="string">'sphere'</span>: {<span class="string">'scale'</span>: <span class="number">0.35</span>}, <span class="string">'stick'</span>: {<span class="string">'radius'</span>: <span class="number">0.20</span>}})</span><br><span class="line">view.zoomTo()</span><br><span class="line">view.animate({<span class="string">'loop'</span>: <span class="string">'forward'</span>}) <span class="comment"># animate</span></span><br><span class="line">view.show()</span><br></pre></td></tr></tbody></table></figure>
+<p>运行结果如下：</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="../assets/gif/ben copy.gif" alt="分子轨迹可视化结果"></p>
+</div>
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    
+    <section id="share">
+      <div class="header"><span>分享文章</span></div>
+      <div class="body">
+        <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="http://zeuler1027.github.io/2024/07/19/py3dmol/"></div>
+        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg"></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=http://zeuler1027.github.io/2024/07/19/py3dmol/&amp;title=使用Py3Dmol创建分子轨迹 - @Atomhacker&amp;summary=本文为使用py3Dmol库创建一系列分子坐标（多帧）组成的分子轨迹，进行动态可视化的教程。"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg"></a><a class="social share-item email" href="mailto:?subject=使用Py3Dmol创建分子轨迹 - @Atomhacker&amp;body=http://zeuler1027.github.io/2024/07/19/py3dmol/"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg"></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg"></a></div>
+        
+        <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
+          <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&amp;data=http://zeuler1027.github.io/2024/07/19/py3dmol/">
+        </div>
+        
+      </div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/08/12/kabsch/">快速进行点群（图节点）对齐以及Kabsch算法的代码实现</a></div><div class="item" id="next"></div></section></div>
+
+
+
 
 
 
 <footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">Songze Huo</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.27.0">Stellar 1.27.0</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-</aside><div class="float-panel blur">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"></path></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#3Dmol-js"><span class="toc-text">3Dmol.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#py3Dmol"><span class="toc-text">py3Dmol</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#py3Dmol%E5%AE%89%E8%A3%85"><span class="toc-text">py3Dmol安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E8%A7%86%E5%8C%96%E5%8D%95%E4%B8%AA%E5%88%86%E5%AD%90%E6%9E%84%E8%B1%A1%EF%BC%88%E7%A4%BA%E4%BE%8B%EF%BC%89"><span class="toc-text">可视化单个分子构象（示例）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E8%A7%86%E5%8C%96%E5%88%86%E5%AD%90%E8%BD%A8%E8%BF%B9"><span class="toc-text">可视化分子轨迹</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A6%96%E5%85%88%E8%AF%BB%E5%8F%96%E5%88%86%E5%AD%90%E7%9A%84%E5%8E%9F%E5%AD%90%E5%BA%8F%E6%95%B0%E5%92%8C%E5%9D%90%E6%A0%87"><span class="toc-text">首先读取分子的原子序数和坐标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2%E4%BB%A5%E5%8F%8A%E5%8F%AF%E8%A7%86%E5%8C%96"><span class="toc-text">格式转换以及可视化</span></a></li></ol></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"></path><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"></path></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class="float-panel blur">
   <button type="button" style="display:none" class="laptop-only rightbar-toggle mobile" onclick="sidebar.rightbar()">
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"></path></svg>
   </button>
