@@ -24,7 +24,7 @@
 <meta property="og:description" content="本文介绍了Kabsch算法原理，并用多个框架对算法进行了代码实现。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-08-12T11:13:08.000Z">
-<meta property="article:modified_time" content="2024-08-27T15:35:35.764Z">
+<meta property="article:modified_time" content="2024-08-27T16:01:17.291Z">
 <meta property="article:author" content="Songze Huo">
 <meta property="article:tag" content="对齐">
 <meta property="article:tag" content="Graph">
@@ -187,7 +187,7 @@ mjx-container[display="true"] + br {
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/Code/">Code</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/%E7%90%86%E8%AE%BA%E8%AE%A1%E7%AE%97/">理论计算</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-12T11:13:08.000Z">2024-08-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-08-27T15:35:35.764Z">2024-08-27</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-12T11:13:08.000Z">2024-08-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-08-27T16:01:17.291Z">2024-08-28</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -278,7 +278,7 @@ GNN）等领域中非常有用。</p>
 </ul>
 <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">R_, t_, rmsd = kabsch_numpy(P, Q)</span><br><span class="line"><span class="built_in">print</span>(rmsd)</span><br></pre></td></tr></tbody></table></figure>
 <figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.881049755021318e-06</span></span><br></pre></td></tr></tbody></table></figure>
-<p>注意此处求得的旋转矩阵和开始随机生成的随机矩阵并不是相同或互逆的，平移向量也不相同或者相反，这是因为最开始对点群<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="1.79ex" height="2.032ex" role="img" focusable="false" viewBox="0 -704 791 898"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D444" d="M399 -80Q399 -47 400 -30T402 -11V-7L387 -11Q341 -22 303 -22Q208 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435Q740 255 592 107Q529 47 461 16L444 8V3Q444 2 449 -24T470 -66T516 -82Q551 -82 583 -60T625 -3Q631 11 638 11Q647 11 649 2Q649 -6 639 -34T611 -100T557 -165T481 -194Q399 -194 399 -87V-80ZM636 468Q636 523 621 564T580 625T530 655T477 665Q429 665 379 640Q277 591 215 464T153 216Q153 110 207 59Q231 38 236 38V46Q236 86 269 120T347 155Q372 155 390 144T417 114T429 82T435 55L448 64Q512 108 557 185T619 334T636 468ZM314 18Q362 18 404 39L403 49Q399 104 366 115Q354 117 347 117Q344 117 341 117T337 118Q317 118 296 98T274 52Q274 18 314 18Z"></path></g></g></g></svg></mjx-container></span>旋转时质点并不在原点，因此是相对原点旋转的，而求出的旋转矩阵是质心在原点时的自旋对应的变换。</p>
+<p>注意此处求得的旋转矩阵和开始QR分解随机生成的随机矩阵并不是相同或互逆的，平移向量也不相同或者相反，这是因为最开始对点群<span class="math inline"><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="1.79ex" height="2.032ex" role="img" focusable="false" viewBox="0 -704 791 898"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D444" d="M399 -80Q399 -47 400 -30T402 -11V-7L387 -11Q341 -22 303 -22Q208 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435Q740 255 592 107Q529 47 461 16L444 8V3Q444 2 449 -24T470 -66T516 -82Q551 -82 583 -60T625 -3Q631 11 638 11Q647 11 649 2Q649 -6 639 -34T611 -100T557 -165T481 -194Q399 -194 399 -87V-80ZM636 468Q636 523 621 564T580 625T530 655T477 665Q429 665 379 640Q277 591 215 464T153 216Q153 110 207 59Q231 38 236 38V46Q236 86 269 120T347 155Q372 155 390 144T417 114T429 82T435 55L448 64Q512 108 557 185T619 334T636 468ZM314 18Q362 18 404 39L403 49Q399 104 366 115Q354 117 347 117Q344 117 341 117T337 118Q317 118 296 98T274 52Q274 18 314 18Z"></path></g></g></g></svg></mjx-container></span>旋转时质点并不在原点，因此是相对原点旋转的，而求出的旋转矩阵是质心在原点时的自旋对应的变换。</p>
 <h2 id="参考文章">参考文章</h2>
 <blockquote>
 <ol type="1">
