@@ -13,18 +13,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>ocaml - @Atomhacker</title>
+  <title>Ocaml/Functional Programming - @Atomhacker</title>
 
   
-    <meta name="description" content="Cornell CS3110, Functional/Ocaml Programming. Tail Recursion 尾递归（Tail Recursion）是一种特殊的递归形式，其中递归调用是函数体中的最后一个操作。在尾递归中，函数在进行递归调用之前不会做任何其他操作，这使得尾递归可以被优化，以避免使用过多的调用栈空间。 这样的优化是通过重用当前的栈帧来实现的，而不是在每次递归调用时创建一个新">
+    <meta name="description" content="Cornell CS3110, Functional/Ocaml Programming.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ocaml">
+<meta property="og:title" content="Ocaml/Functional Programming">
 <meta property="og:url" content="http://zeuler1027.github.io/2024/09/07/ocaml/index.html">
 <meta property="og:site_name" content="@Atomhacker">
-<meta property="og:description" content="Cornell CS3110, Functional/Ocaml Programming. Tail Recursion 尾递归（Tail Recursion）是一种特殊的递归形式，其中递归调用是函数体中的最后一个操作。在尾递归中，函数在进行递归调用之前不会做任何其他操作，这使得尾递归可以被优化，以避免使用过多的调用栈空间。 这样的优化是通过重用当前的栈帧来实现的，而不是在每次递归调用时创建一个新">
+<meta property="og:description" content="Cornell CS3110, Functional/Ocaml Programming.">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-07T03:53:47.000Z">
-<meta property="article:modified_time" content="2024-09-07T04:42:19.550Z">
+<meta property="article:modified_time" content="2024-09-07T04:44:14.005Z">
 <meta property="article:author" content="Songze Huo">
 <meta property="article:tag" content="函数式编程">
 <meta property="article:tag" content="Ocaml">
@@ -174,7 +174,7 @@ mjx-container[display="true"] + br {
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/09/07/ocaml/"><span class="title">ocaml</span></a><a class="item title" href="/2024/08/12/kabsch/"><span class="title">快速进行点群（图节点）对齐以及Kabsch算法的代码实现</span></a><a class="item title" href="/2024/07/19/py3dmol/"><span class="title">使用Py3Dmol创建分子轨迹</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/09/07/ocaml/"><span class="title">Ocaml/Functional Programming</span></a><a class="item title" href="/2024/08/12/kabsch/"><span class="title">快速进行点群（图节点）对齐以及Kabsch算法的代码实现</span></a><a class="item title" href="/2024/07/19/py3dmol/"><span class="title">使用Py3Dmol创建分子轨迹</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -187,18 +187,19 @@ mjx-container[display="true"] + br {
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-09-07T03:53:47.000Z">2024-09-07</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-09-07T04:42:19.550Z">2024-09-07</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-09-07T03:53:47.000Z">2024-09-07</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-09-07T04:44:14.005Z">2024-09-07</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>ocaml</span></h1>
+        <h1 class="text title"><span>Ocaml/Functional Programming</span></h1>
         
       </div>
     </div>
     
   </div>
   </div><article class="md-text content"><div id="postchat_postcontent"><p>Cornell CS3110, Functional/Ocaml Programming.</p>
+<span id="more"></span>
 <h2 id="tail-recursion">Tail Recursion</h2>
 <p>尾递归（Tail
 Recursion）是一种特殊的递归形式，其中递归调用是函数体中的最后一个操作。在尾递归中，函数在进行递归调用之前不会做任何其他操作，这使得尾递归可以被优化，以避免使用过多的调用栈空间。</p>
@@ -245,10 +246,7 @@ overflow的问题，使用<code>opam install zarith</code>来安装Zarith（主�
       <div class="header"><span>分享文章</span></div>
       <div class="body">
         <div class="link"><input class="copy-area" readonly="true" id="copy-link" value="http://zeuler1027.github.io/2024/09/07/ocaml/"></div>
-        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg"></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=http://zeuler1027.github.io/2024/09/07/ocaml/&amp;title=ocaml - @Atomhacker&amp;summary=Cornell CS3110, Functional/Ocaml Programming.
-Tail Recursion
-尾递归（Tail
-Recursion）是一种特殊的递归形式，其中递归调用是函数体中的最后一个操作。在尾递归中，函..."><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg"></a><a class="social share-item email" href="mailto:?subject=ocaml - @Atomhacker&amp;body=http://zeuler1027.github.io/2024/09/07/ocaml/"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg"></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg"></a></div>
+        <div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/b32ef3da1162a.svg"></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=http://zeuler1027.github.io/2024/09/07/ocaml/&amp;title=Ocaml/Functional Programming - @Atomhacker&amp;summary=Cornell CS3110, Functional/Ocaml Programming."><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/80c07e4dbb303.svg"></a><a class="social share-item email" href="mailto:?subject=Ocaml/Functional Programming - @Atomhacker&amp;body=http://zeuler1027.github.io/2024/09/07/ocaml/"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/a1b00e20f425d.svg"></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/social/8411ed322ced6.svg"></a></div>
         
         <div class="qrcode" id="qrcode-wechat" style="opacity:0;height:0">
           <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&amp;data=http://zeuler1027.github.io/2024/09/07/ocaml/">
